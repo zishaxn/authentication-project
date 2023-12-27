@@ -26,7 +26,7 @@ function Login() {
         {
           ...values,
         },
-        { withCredentials: true }
+        { Credentials: true }
       );
       if (data) {
         if (data.errors) {
