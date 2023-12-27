@@ -13,7 +13,7 @@ export default function Cards() {
         navigate("/login");
       } else {
         const { data } = await axios.post(
-          "http://localhost:4000",
+          "https://authentication-project-phi.vercel.app/",
           {},
           {
             withCredentials: true,
