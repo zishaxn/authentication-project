@@ -34,6 +34,7 @@ function Login() {
           if (email) generateError(email);
           else if (password) generateError(password);
         } else {
+          console.log('user is here');
           navigate("/");
         }
       }
