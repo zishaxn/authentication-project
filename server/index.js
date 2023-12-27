@@ -9,7 +9,7 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("Hello");
 });
-app.listen(4000, (err) => {
+app.listen("https://authentication-frontend-neon.vercel.app/", (err) => {
   if (err) {
     console.log(err);
   } else {
