@@ -37,7 +37,7 @@ app.use(
     origin: ["https://authentication-frontend-neon.vercel.app"],
 
     methods: ["GET", "POST"],
-    credentials: true,
+    withCredentials: true,
   })
 );
 
