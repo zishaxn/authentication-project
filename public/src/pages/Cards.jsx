@@ -13,7 +13,7 @@ export default function Cards() {
         navigate("/login");
       } else {
         const { data } = await axios.post(
-          "https://authentication-project-phi.vercel.app/",
+          "https://authentication-project-phi.vercel.app",
           {},
           {
             withCredentials: true,
@@ -23,7 +23,6 @@ export default function Cards() {
           removeCookie("jwt");
           navigate("/login");
         } else
-          console.log('user is here');
           toast(`Hi ${data.user} 🦄`, {
             theme: "dark",
           });
