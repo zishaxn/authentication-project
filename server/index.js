@@ -7,6 +7,13 @@ const cookieParser = require("cookie-parser");
 const app = express();
 
 app.get("/", (req, res) => {
+  // Example CORS headers in Express response
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://your-frontend-app.vercel.app"
+  );
+  res.header("Access-Control-Allow-Credentials", true);
+
   res.send("Hello");
 });
 app.listen(4000, (err) => {
@@ -35,11 +42,11 @@ mongoose
 app.use(
   cors({
     origin: ["https://authentication-frontend-neon.vercel.app"],
-
     methods: ["GET", "POST"],
-    withCredentials: true,
+    credentials: true, // Use 'credentials' instead of 'withCredentials'
   })
 );
+
 
 app.use(cookieParser());
 app.use(express.json());
