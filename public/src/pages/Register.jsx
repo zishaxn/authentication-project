@@ -21,7 +21,7 @@ function Register() {
     event.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/register",
+        "https://authentication-project-phi.vercel.app/register",
         {
           ...values,
         },
