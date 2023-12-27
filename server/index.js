@@ -34,7 +34,7 @@ mongoose
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["https://authentication-frontend-neon.vercel.app/"],
     methods: ["GET", "POST"],
     credentials: true,
   })
