@@ -23,6 +23,7 @@ export default function Cards() {
           removeCookie("jwt");
           navigate("/login");
         } else
+          console.log('user is here');
           toast(`Hi ${data.user} 🦄`, {
             theme: "dark",
           });
