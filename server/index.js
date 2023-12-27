@@ -9,7 +9,7 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("Hello");
 });
-app.listen("https://authentication-frontend-neon.vercel.app/", (err) => {
+app.listen(4000, (err) => {
   if (err) {
     console.log(err);
   } else {
@@ -19,7 +19,7 @@ app.listen("https://authentication-frontend-neon.vercel.app/", (err) => {
 
 mongoose
   .connect(
-    "mongodb+srv://zishan:Ja8epAlXnerGjdlJ@cluster0.pamvqgm.mongodb.net/?retryWrites=true&w=majority",
+    "mongodb+srv://zishan:Ja8epAlXnerGjdlJ@cluster0.pamvqgm.mongodb.net/test?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -34,7 +34,8 @@ mongoose
 
 app.use(
   cors({
-    origin: ["https://authentication-frontend-neon.vercel.app/"],
+    origin: ["https://authentication-frontend-neon.vercel.app"],
+
     methods: ["GET", "POST"],
     credentials: true,
   })
